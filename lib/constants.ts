@@ -1,10 +1,10 @@
 export const SITE_NAME = "Local Rank India"
 export const TAGLINE = "We Build Websites That Get You Customers"
-export const PHONE = "+91-XXXXXXXXXX"
-export const EMAIL = "hello@localrankindia.com"
-export const WHATSAPP_NUMBER = "91XXXXXXXXXX"
-export const WHATSAPP_DEFAULT = `https://wa.me/91XXXXXXXXXX?text=Hi+Nishanth%2C+I+want+a+website+for+my+business`
-export const WHATSAPP_QUOTE = `https://wa.me/91XXXXXXXXXX?text=Hi%2C+I+need+a+free+quote+for+a+website`
+export const PHONE = "+91 8837061320"
+export const EMAIL = "localrankindia@gmail.com"
+export const WHATSAPP_NUMBER = "918837061320"
+export const WHATSAPP_DEFAULT = `https://wa.me/918837061320?text=Hi+Nishanth%2C+I+want+a+website+for+my+business`
+export const WHATSAPP_QUOTE = `https://wa.me/918837061320?text=Hi%2C+I+need+a+free+quote+for+a+website`
 export const ADDRESS = "Agartala, Tripura, India"
 export const BUSINESS_HOURS = "Mon–Sat, 9AM–7PM"
 

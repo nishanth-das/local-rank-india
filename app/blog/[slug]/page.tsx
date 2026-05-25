@@ -50,44 +50,40 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       </div>
 
       {/* Hero Section - Matches Portfolio/Services Premium Dark */}
-      <section className="relative bg-[#0A0F1E] pt-32 pb-48 md:pt-40 md:pb-64 overflow-hidden">
+      <section className="relative bg-[#0A0F1E] pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden border-b border-white/5">
         {/* Background Decorative Elements */}
-        <div className="absolute inset-0 bg-dot-grid opacity-10"></div>
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-[#1B4FFF]/10 rounded-full blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#FF6B2B]/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#1B4FFF]/20 to-[#FF6B2B]/10 rounded-full blur-[120px] pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#1B4FFF]/10 rounded-full blur-[100px] pointer-events-none transform -translate-x-1/3 translate-y-1/3"></div>
         
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-[#9CA3AF] hover:text-white transition-all text-sm font-bold mb-10 uppercase tracking-[0.3em] group">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <Link href="/blog" className="inline-flex items-center gap-2 text-[#9CA3AF] hover:text-white transition-all text-sm font-bold mb-12 uppercase tracking-[0.3em] group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-            Blog Archive
+            Back to Articles
           </Link>
           
-          <div className="flex flex-col items-center gap-6 mb-10">
-            <div className="inline-flex items-center gap-2 bg-[#1B4FFF]/20 text-[#1B4FFF] text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-[0.2em] border border-[#1B4FFF]/30 shadow-sm">
-              {post.category}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="text-left reveal-on-scroll">
+              <div className="inline-flex items-center gap-2 bg-[#1B4FFF]/20 text-[#1B4FFF] text-[10px] font-black px-5 py-2 rounded-full uppercase tracking-[0.2em] mb-8 border border-[#1B4FFF]/30">
+                {post.category}
+              </div>
+              
+              <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[4rem] text-white leading-[1.1] tracking-tight mb-8">
+                {post.title}
+              </h1>
+              
+              <div className="flex flex-wrap items-center gap-6 text-[#9CA3AF] text-sm font-bold uppercase tracking-widest">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-[#FF6B2B]" />
+                  <span>{post.readTime}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Image src={post.author.avatar} alt={post.author.name} width={28} height={28} className="rounded-full ring-2 ring-white/10" unoptimized />
+                  <span className="text-white/80">{post.author.name}</span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <h1 className="font-display font-black text-4xl md:text-5xl lg:text-[4.5rem] bg-gradient-to-r from-white via-white to-[#9CA3AF] bg-clip-text text-transparent leading-[1.1] tracking-tight mb-8">
-            {post.title}
-          </h1>
-          
-          <div className="flex items-center justify-center gap-4 text-[#9CA3AF] text-sm font-bold uppercase tracking-widest mb-12">
-            <Clock className="w-4 h-4 text-[#FF6B2B]" />
-            <span>{post.readTime}</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-            <span className="text-white/60">Insight</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="relative -mt-32 pb-24 md:pb-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* High-End Featured Image Frame */}
-          <div className="relative max-w-5xl mx-auto mb-24 reveal-on-scroll">
-            <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.2)] border-[12px] border-white bg-white group ring-1 ring-black/5">
+            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 group reveal-on-scroll">
               <Image 
                 src={post.coverImage} 
                 alt={post.title}
@@ -96,9 +92,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 priority={true}
                 unoptimized={true}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0F1E]/80 via-transparent to-transparent opacity-80"></div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="relative py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="flex flex-col lg:flex-row gap-20 max-w-6xl mx-auto items-start">
             
@@ -133,14 +135,14 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {/* Enhanced Article Body */}
               <article className="prose prose-lg md:prose-xl max-w-none 
                 prose-headings:font-display prose-headings:font-black prose-headings:tracking-tight prose-headings:reveal-on-scroll
-                prose-h2:text-4xl md:prose-h2:text-5xl prose-h2:text-[#0A0F1E] prose-h2:mt-24 prose-h2:mb-10 prose-h2:pb-4 prose-h2:border-b-2 prose-h2:border-[#1B4FFF]/10
+                prose-h2:text-3xl md:prose-h2:text-4xl prose-h2:text-[#0A0F1E] prose-h2:mt-20 prose-h2:mb-8
                 prose-h3:text-2xl md:prose-h3:text-3xl prose-h3:text-[#0A0F1E] prose-h3:mt-16
-                prose-p:text-[#4A5568] prose-p:leading-[1.9] prose-p:mb-10 prose-p:reveal-on-scroll
+                prose-p:text-[#4A5568] prose-p:leading-[1.9] prose-p:mb-8 prose-p:reveal-on-scroll
                 prose-strong:text-[#0A0F1E] prose-strong:font-black
-                prose-blockquote:border-none prose-blockquote:bg-[#0A0F1E] prose-blockquote:p-12 prose-blockquote:rounded-[3rem] prose-blockquote:not-italic prose-blockquote:font-bold prose-blockquote:text-white prose-blockquote:my-20 prose-blockquote:shadow-2xl prose-blockquote:reveal-on-scroll
+                prose-blockquote:border-none prose-blockquote:bg-[#F8F9FF] prose-blockquote:p-10 prose-blockquote:rounded-[2rem] prose-blockquote:not-italic prose-blockquote:font-bold prose-blockquote:text-[#1B4FFF] prose-blockquote:my-16 prose-blockquote:shadow-sm prose-blockquote:reveal-on-scroll
                 prose-a:text-[#1B4FFF] prose-a:font-bold hover:prose-a:underline
-                prose-li:mb-4 prose-li:reveal-on-scroll
-                prose-img:rounded-[3rem] prose-img:shadow-2xl prose-img:my-20 prose-img:reveal-on-scroll
+                prose-li:mb-4 prose-li:reveal-on-scroll prose-ul:list-none prose-ul:pl-0
+                prose-img:rounded-[2rem] prose-img:shadow-xl prose-img:my-16 prose-img:reveal-on-scroll
                 ">
                 <div 
                   dangerouslySetInnerHTML={{ __html: post.content }} 

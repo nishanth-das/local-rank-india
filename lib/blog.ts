@@ -52,6 +52,7 @@ export const blogPosts: BlogPost[] = [
     content: `
   <h2>The Way Customers Find Businesses Has Changed Forever</h2>
   <p>Think about the last time you needed a dentist, a gym, or a photographer. Did you ask a friend? Maybe. But chances are you opened Google and typed something like "dentist near me" or "best gym in Agartala."</p>
+  <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80" alt="Local Indian business owners checking digital presence" />
   
   <div class="blog-infographic">
     <h4 style="margin-top:0; font-weight:900; font-size:1.25rem; color:#0A0F1E;">The Digital Reality in India</h4>
@@ -135,6 +136,7 @@ export const blogPosts: BlogPost[] = [
     content: `
   <h2>Why Google Maps Matters for Your Business</h2>
   <p>When someone searches "pharmacy near me" or "hotel in Shillong," Google shows a map with 3 local businesses at the top of the results. This is called the "Local Pack" — and it's prime real estate. Businesses that appear here get the majority of calls and visits.</p>
+  <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&q=80" alt="Google Maps navigation on smartphone" />
 
   <div class="blog-infographic">
     <h4 style="margin-top:0; font-weight:900; font-size:1.25rem; color:#0A0F1E;">The Power of the Local Pack</h4>
@@ -204,6 +206,7 @@ export const blogPosts: BlogPost[] = [
   <h2>Patients Google Their Doctor Before Booking</h2>
   <p>Before a patient calls your clinic, they search for you online. They want to know who you are, what you specialise in, where you're located, and what other patients say about you. If they can't find a website, many will simply move on to a doctor who has one.</p>
   <p>This is the new reality of healthcare in India — and it applies whether you're in Mumbai or Agartala.</p>
+  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80" alt="Doctor consulting patient in modern clinic" />
   
   <h2>What a Great Clinic Website Must Include</h2>
   <p>A clinic website isn't just a digital business card. Done right, it actively brings in new patients. Here's what every doctor's or clinic's website should have:</p>
@@ -248,6 +251,7 @@ export const blogPosts: BlogPost[] = [
   <h2>What Is Local SEO?</h2>
   <p>Local SEO (Search Engine Optimisation) is the process of making your business more visible in Google's search results for location-based searches. When someone types "salon near me" or "gym in Guwahati," Google shows results it considers most relevant and local. Local SEO is how you make sure your business is one of those results.</p>
   <p>The best part? Unlike Google Ads, local SEO traffic is completely free. Once you rank, you keep getting customers without paying per click.</p>
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data analytics and SEO ranking charts" />
   
   <h2>The Three Pillars of Local SEO</h2>
   <p><strong>1. Google Business Profile:</strong> This is the most impactful thing you can do. A complete, optimised Google Business Profile makes you eligible to appear in Google Maps results and the Local Pack — the map section that appears at the top of local search results.</p>
@@ -294,6 +298,7 @@ export const blogPosts: BlogPost[] = [
     content: `
   <h2>Northeast India Is Online — Are Your Customers Finding You?</h2>
   <p>Smartphone usage in Northeast India has exploded over the last 5 years. People in Agartala, Guwahati, Imphal, Shillong, and Aizawl are using Google to find businesses just as much as people in Delhi or Bangalore. But most local businesses here haven't kept up — and it's costing them customers every day.</p>
+  <img src="https://images.unsplash.com/photo-1627914845012-a89e92ee146d?w=800&q=80" alt="Mobile phone usage in India" />
   
   <h2>Reason 1: Customers Can't Find You When They Search</h2>
   <p>When someone moves to Agartala and searches for a dentist, a gym, or a photographer — they're going to find whoever shows up on Google. If you're not there, you simply don't exist for that customer. It doesn't matter how good your business is if it's invisible online.</p>

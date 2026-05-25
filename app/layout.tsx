@@ -85,8 +85,8 @@ export default function RootLayout({
                 "longitude": "91.2868"
               },
               "areaServed": "India",
-              "telephone": "+91-XXXXXXXXXX",
-              "email": "hello@localrankindia.com",
+              "telephone": "+91 8837061320",
+              "email": "localrankindia@gmail.com",
               "url": "https://localrankindia.com",
               "sameAs": [
                 "https://facebook.com/localrankindia",
