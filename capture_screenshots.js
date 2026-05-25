@@ -2,7 +2,12 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
-const outputDir = 'C:\\Users\\nisha\\.gemini\\antigravity\\brain\\4ddfc83c-9df8-4bb9-8c7e-023032434804';
+const outputDir = process.env.SCREENSHOT_OUT_DIR || path.join(__dirname, 'screenshots');
+
+// Ensure output directory exists
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
 
 const pages = [
   { name: '01_homepage', url: 'http://localhost:3001/' },

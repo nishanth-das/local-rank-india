@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/lib/blog'
+import { cities } from '@/lib/cities'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://localrankindia.com'
@@ -27,5 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...routes, ...blogs]
+  const cityRoutes = cities.map((city) => ({
+    url: `${baseUrl}/web-design/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  return [...routes, ...blogs, ...cityRoutes]
 }

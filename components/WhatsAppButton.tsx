@@ -1,12 +1,29 @@
 "use client"
 
 import React, { useState, useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { WHATSAPP_DEFAULT, WHATSAPP_NUMBER } from "@/lib/constants"
 import { Globe, MapPin, MessageCircle, X } from 'lucide-react'
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
+  const [shiftUp, setShiftUp] = useState(false)
+  const pathname = usePathname()
   const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400 && pathname !== '/contact') {
+        setShiftUp(true)
+      } else {
+        setShiftUp(false)
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Check initial scroll position
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [pathname])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -33,7 +50,12 @@ export default function WhatsAppButton() {
   }
 
   return (
-    <div ref={containerRef} className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div 
+      ref={containerRef} 
+      className={`fixed right-6 z-50 flex flex-col items-end gap-3 transition-all duration-300 ${
+        shiftUp ? 'bottom-24 md:bottom-6' : 'bottom-6'
+      }`}
+    >
       {/* Tray */}
       <div 
         className={`flex flex-col gap-2 items-end transition-all duration-300 ease-in-out ${

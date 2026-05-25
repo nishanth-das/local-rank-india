@@ -5,7 +5,7 @@ module.exports = {
   sitemapSize: 7000,
   changefreq: "weekly",
   priority: 0.7,
-  exclude: ["/404"],
+  exclude: ["/404", "/sitemap.xml", "/sitemap.xml/", "/sitemap-0.xml"],
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },
